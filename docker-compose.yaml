@@ -3,10 +3,13 @@ services:
   app:
     build: .
     volumes:
-    - .:/app
     - ~/.m2:/root/.m2
-    working_dir: /app
     ports:
      - "8080:8080"
-    command: mvn clean install
-    command: java -jar ./target/spring-boot-web-jsp-1.0.war
+    # command: mvn clean install
+    # command: java -jar ./target/spring-boot-web-jsp-1.0.war
+    
+    # working_dir: /app
+    #     volumes:
+    # - .:/app
+    # - ~/.m2:/root/.m2
